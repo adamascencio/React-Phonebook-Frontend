@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://on221g-3001.csb.app";
+const baseUrl = "https://74zfpy-3001.csb.app";
 
 const getPersons = () => {
   const request = axios.get(`${baseUrl}/api/persons`);
