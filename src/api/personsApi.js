@@ -8,19 +8,18 @@ const getPersons = () => {
 };
 
 const createPerson = (personObj) => {
-  const url = `${baseUrl}/api/persons`;
-  const request = axios.post(url, personObj);
+  const request = axios.post(baseUrl, personObj);
   return request.then((res) => res.data);
 };
 
 const deletePerson = (id) => {
-  const url = `${baseUrl}/api/persons/:${id}`;
+  const url = `${baseUrl}/:${id}`;
   const request = axios.delete(url);
   return request.then((res) => res.data);
 };
 
 const updatePerson = (id, personObj) => {
-  const url = `${baseUrl}/api/persons/:${id}`;
+  const url = `${baseUrl}/:${id}`;
   const request = axios.put(url, personObj);
   return request.then((res) => res.data).catch((error) => 0);
 };
