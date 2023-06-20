@@ -19,7 +19,7 @@ const deletePerson = (id) => {
 };
 
 const updatePerson = (id, personObj) => {
-  const url = `${baseUrl}/:${id}`;
+  const url = `${baseUrl}/${id}`;
   const request = axios.put(url, personObj);
   return request.then((res) => res.data).catch((error) => 0);
 };
@@ -30,3 +30,4 @@ export default {
   deletePerson,
   updatePerson,
 };
+
